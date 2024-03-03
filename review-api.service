@@ -1,0 +1,12 @@
+[Unit]
+Description=Reviews API Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/ec2-user/
+ExecStart=/usr/bin/python3 /home/ec2-user/venv/bin/python /home/ec2-user/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
