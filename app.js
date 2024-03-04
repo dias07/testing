@@ -1,6 +1,6 @@
 $(document).ready(function() {
     //link for the file
-    fetch('https://drive.google.com/uc?export=download&id=1hoo8KzAao0ZTirsHPZXEhF71cNa8-uY6')
+    fetch('https://raw.githubusercontent.com/dias07/testing/main/links.js')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
