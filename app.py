@@ -16,7 +16,7 @@ def get_secret(secret_name, region_name="us-east-1"):
     return eval(secret_data)  # Assuming the secret data is stored as a dictionary
 
 # Database credentials retrieved from AWS SecretsManager
-db_credentials = get_secret('your_secret_name_here')
+db_credentials = get_secret('secret_name')
 app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://{db_credentials['DB_USERNAME']}:{db_credentials['DB_PASSWORD']}@{db_credentials['DB_ENDPOINT']}/{db_credentials['DB_NAME']}"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
